@@ -311,10 +311,10 @@ int main() {
 	BYTE d_text[128] = {0,};
 	BYTE key[9] = {0,};
 	
-	printf("���Է�: ");
+	printf("Enter Plain Text : ");
 	gets((char *)p_text);
 	
-	printf("���Ű �Է�: ");
+	printf("Enter Key: ");
 	scanf("%s",key);
 	
 	msg_len=(rsize_t)strlen((char *)p_text);
@@ -324,7 +324,7 @@ int main() {
 		DES_Encryption(&p_text[i*BLOCK_SIZE], &c_text[i*BLOCK_SIZE],key);
 	}
 	
-	printf("\n��ȣ��: ");
+	printf("\nCyper Text : ");
 	for( i=0; i<(block_count*BLOCK_SIZE); i++ ) {
 		printf("%c ",c_text[i]);
 	}
