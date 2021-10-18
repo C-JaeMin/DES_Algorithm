@@ -35,7 +35,7 @@ if($result = mysqli_query($conn, $query)){
             
     echo "}";
 }
- 
+
 else{
     echo "failed to get data from database.";
 }
